@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sellers Friend</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <section class="login" id="login">
+        <div class="container-fluid min-vh-100">
+            <div class="row main-row">
+                
+                <!-- 3d-image -->
+                <img src="assets/Images/3D.png" alt="" class="3d-img img-fluid position-fixed bottom-0">
+
+                <!-- logo and headings -->
+                <div class="col-md-3">
+                    <div class="login-heading">
+                        <img src="assets/Images/logo.png" alt="" class="logo-fix">
+                        <h5 class="mt-5 text-white font-weight-normal">Transform Your Product Imagery<br>with Precision Mockups</h5>
+                    </div>
+                </div>
+
+                <!-- Login page starts here -->
+                <div class="col-md-9 bg-white rounded-start-5 d-flex justify-content-center align-items-center flex-column min-vh-100">
+
+                    <!-- 3d-image -->
+                    <img src="assets/Images/login-page-img.png"  class="position-absolute top-0 end-0" alt="3d image">
+                    <div class="formText my-auto">
+                        <h2 class="fw-semibold">Welcome Back!</h2>
+                        <h6 class="lh-base">Log In To Your Account To Continue Your Creative Journey. We're <br>Excited To Have You Back!</h6>
+
+                        <!-- form -->
+                        <form>
+                            <div class="form-group text-end inp-element">
+                              <small id="emailHelp" class="form-text validation">Incorrect ID. Please try again.</small>
+                              <input type="email" class="form-control px-0" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User ID">
+                              
+                            </div>
+                            <div class="form-group text-end inp-element">
+                                <small id="passwordHelp" class="form-text validation">Incorrect Password. Please try again.</small>
+                              <input type="password" class="form-control px-0" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+            
+                            <button type="button" class="btn btn-primary login-btn fw-semibold" onclick="navigateTo('dashboard.html')">Login</button>
+                            <div class="forget"><a href="forget-pass.html" id="ForgetPassword">Forget Password?</a></div>
+
+                            <div class="access-page"><h6>Don’t Have An Account? </h6><a href="request-access.html">Request For Access</a></div>
+                          </form>
+                    </div>
+                    <!-- login page footer -->
+                    <div class="foot fw-semibold text-center text-spacing-5 sticky-md-bottom">
+                        Report Error &nbsp;|&nbsp; Feedback &nbsp;|&nbsp; © Copyright 2024, All Rights Reserved &nbsp;|&nbsp; Build Version: 1.0.0
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
