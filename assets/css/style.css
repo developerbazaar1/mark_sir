@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap');
 * {
-    font-family: 'Lato','Lato-Medium', sans-serif;
+    font-family: 'Lato', sans-serif;
 
 }
 
@@ -28,7 +28,7 @@
     margin-left: 43px;
 }
 
-#login {
+section {
     background-color: #0D429D;
 }
 
@@ -38,18 +38,18 @@
 }
 
 .formText h6 {
-    font-family: 'Lato-Medium';
+    /* font-family: 'Lato-Medium'; */
     color: #2A2A2A;
     letter-spacing: 0.32px;
     margin-bottom: 6px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 form .validation {
     font-size: 12px;
     color: #FF0000;
-    font-family: 'Lato-Medium';
-
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
 }
 
 .formText input {
@@ -98,7 +98,8 @@ form .forget {
 }
 
 form .forget a{
-    font-family: 'Lato-Medium';
+    font-weight: 600;
+    /* font-family: 'Lato-Medium'; */
     color: #001F3F;
     font-size: 14px;
     text-decoration: none;
@@ -108,7 +109,8 @@ form .forget a{
     color: #2A2A2A;
     letter-spacing: 0.32px;
     display: inline;
-    font-family: 'Lato-Medium';
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
 
 }
 
@@ -125,3 +127,82 @@ form .forget a{
     font-size: 12px;
     margin-bottom: 15px;
 }
+
+/* responsive essentials */
+.mob-logo {
+    display: none;
+}
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+    /* Your mobile-specific header styles go here */
+
+    .mob-logo {
+        width: 145px;
+        height: 37px;
+        margin-top: 7vh;
+        display: block;
+    }
+
+    .side-heading {
+        display: none;
+    }
+
+    .d-img1 {
+        display: none;
+    }
+    .d-img2 {
+        display: none;
+    }
+
+    .second-col {
+        border-radius: unset !important;
+    }
+
+    .second-col h6 br {
+        display: none;
+    }
+
+    .second-col {
+        background: linear-gradient(
+    to bottom, 
+    #0D429D 0%, 
+    #99bbf7 50%, 
+    #99bbf7 50%, 
+    #ffffff 100%
+  );
+    }
+
+    .formText {
+        /* border: 1px solid #0D429D; */
+        padding: 15px;
+        border-radius: 2%;
+        background: #fff;
+    }
+}
+
+@media (max-width: 540px) {
+
+    
+    .formText h6 {
+        font-size: 14px;
+    }
+
+    .access-page a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .d-img1 {
+        display: none;
+    }
+}
+
+@media (max-width: 1140px) {
+    .d-img1 {
+        display: none;
+    }
+}
+

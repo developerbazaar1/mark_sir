@@ -81,7 +81,8 @@ nav .user-img {
 }
 
 .sub-heading h6 {
-    font-family: 'Lato-Medium';
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
     color: #2A2A2A;
     letter-spacing: 0.32px;
     margin-top: 10px;
@@ -128,7 +129,7 @@ input.form-control:focus {
     background-color: #0D429D;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 25px;
+    margin: 25px 0px;
 }
 
 .submit-btn:hover {
@@ -175,3 +176,58 @@ input.form-control:focus {
     font-size: 12px;
     margin-bottom: 15px;
 }
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+    /* Your mobile-specific header styles go here */
+
+    nav {
+        flex-wrap: nowrap;
+    }
+
+    nav h5 {
+        display: none;
+    }
+
+    .nav-content {
+        margin: 0px;
+    }
+
+    .formText {
+        margin-top: 1.2rem !important;
+    }
+}
+
+@media (max-width: 540px) {
+    
+    .headText h2 {
+        /* font-size: 21px; */
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .sub-heading h6 br {
+       display: none;
+    }
+
+    .formText h6 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .formText {
+        margin-top: 1.2rem !important;
+        padding: 0% !important;
+    }
+
+    .headText .back-btn-text {
+        display: none;
+     }
+ 
+     .headText h2 {
+         padding: 0 !important;
+     }
+ 
+}
+

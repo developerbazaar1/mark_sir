@@ -38,7 +38,8 @@
 }
 
 .formText h6 {
-    font-family: 'Lato-Medium';
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
     color: #2A2A2A;
     letter-spacing: 0.32px;
     margin-bottom: 25px;
@@ -123,4 +124,18 @@ input.form-control:focus {
 
 .okay-btn:hover {
     background-color: #0D429D;
+}
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+    /* Your mobile-specific header styles go here */
+
+    .d-img {
+        display: none;
+    }
+
+    .formText h6 br {
+        display: none;
+    }
 }
