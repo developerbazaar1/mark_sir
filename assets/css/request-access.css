@@ -40,7 +40,8 @@
 }
 
 .formText h6 {
-    font-family: 'Lato-Medium';
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
     color: #2A2A2A;
     letter-spacing: 0.32px;
     margin-bottom: 25px;
