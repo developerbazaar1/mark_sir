@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+
+}
+
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url('../font/Lato-Medium.ttf');
+  }
+
+.main-row>img {
+    width: 308.375px;
+    height: 234.433px;
+    margin: 0 0 10.2px 234px;
+    /* transform: rotate(-7.112deg); */
+}
+
+.logo-fix {
+    width: 145px;
+    height: 37px;
+    margin-top: 60px;
+    margin-bottom: 12px;
+}
+
+.login-heading{
+    margin-left: 43px;
+}
+
+section {
+    background-color: #0D429D;
+}
+
+.formText h2 {
+    color: #001F3F;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.formText h6 {
+    /* font-family: 'Lato-Medium'; */
+    color: #2A2A2A;
+    letter-spacing: 0.32px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+form .validation {
+    font-size: 12px;
+    color: #FF0000;
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
+}
+
+.formText input {
+    border: none;
+    border-bottom: 1px solid #A1A1A1;
+    border-radius: 0;
+    /* width: 525px; */
+}
+
+.formText input::placeholder {
+    color: #9D9D9D;
+}
+
+input.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #A1A1A1;
+}
+
+
+.login-btn {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    background-color: #0D429D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+}
+
+.login-btn:hover {
+    background-color: #0D429D;
+}
+
+#exampleInputEmail1 {
+    padding: 10px 0px;
+    margin-bottom: 6px;
+}
+
+#exampleInputPassword1{
+    padding: 10px 0px;
+    margin-bottom: 15px;
+}
+
+form .forget {
+    margin-bottom: 12.5px;
+}
+
+form .forget a{
+    font-weight: 600;
+    /* font-family: 'Lato-Medium'; */
+    color: #001F3F;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.access-page h6 {
+    color: #2A2A2A;
+    letter-spacing: 0.32px;
+    display: inline;
+    /* font-family: 'Lato-Medium'; */
+    font-weight: 600;
+
+}
+
+.access-page a {
+    color: #001F3F;
+    font-family: "Montserrat Alternates";
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.foot {
+    color: #001F3F;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* responsive essentials */
+.mob-logo {
+    display: none;
+}
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+    /* Your mobile-specific header styles go here */
+
+    .mob-logo {
+        width: 145px;
+        height: 37px;
+        margin-top: 7vh;
+        display: block;
+    }
+
+    .side-heading {
+        display: none;
+    }
+
+    .d-img1 {
+        display: none;
+    }
+    .d-img2 {
+        display: none;
+    }
+
+    .second-col {
+        border-radius: unset !important;
+    }
+
+    .second-col h6 br {
+        display: none;
+    }
+
+    .second-col {
+        background: linear-gradient(
+    to bottom, 
+    #0D429D 0%, 
+    #99bbf7 50%, 
+    #99bbf7 50%, 
+    #ffffff 100%
+  );
+    }
+
+    .formText {
+        /* border: 1px solid #0D429D; */
+        padding: 15px;
+        border-radius: 2%;
+        background: #fff;
+    }
+}
+
+@media (max-width: 540px) {
+
+    
+    .formText h6 {
+        font-size: 14px;
+    }
+
+    .access-page a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .d-img1 {
+        display: none;
+    }
+}
+
+@media (max-width: 1140px) {
+    .d-img1 {
+        display: none;
+    }
+}
+
