@@ -1,0 +1,145 @@
+@extends('admin.layouts.header')
+@section('styles')
+    
+@endsection
+@section('content')
+
+<main class="app-content">
+    <div class="app-title">
+        <div>
+          <h1>
+            <i class="fa fa-th-large"></i> Validation List
+          </h1>
+        </div>
+         <ul class="app-breadcrumb breadcrumb side">
+          <li class="breadcrumb-item"><i class="bi bi-house-door fs-6"></i></li>
+        
+          <li class="breadcrumb-item active"><a href="{{ route('admin-error-list') }}">Validation list</a></li>
+        </ul>
+    </div>
+
+    
+
+     @if($message = Session::get('success'))
+         <div class="alert alert-success alert-dismissible fade show w-100 success_alert" role="alert">
+           <strong>Success!</strong> {{ $message }}   
+         </div>
+     @endif
+   <div class="row">
+      <div class="col-md-12">
+         <div class="tile">
+            <div class="tile-body">
+               <div class="table-responsive">
+                  <table class="table table-hover table-bordered" id="sampleTable">
+                     <thead>
+                        <tr>
+                            <th>S.No</th> 
+                            <th>Site Type</th>
+                            <th>Asset Type</th>
+                            <th>Device Type</th>
+                            <th>Max Width</th>
+                            <th>Max Height</th>
+                            <th>Min Width</th>
+                            <th>Min Height</th>
+                            <th>Dimentions</th>
+                            <th>Ratio</th>
+                            <th>Max Size</th>
+                            <th>Max No</th>
+                            <th>Min No</th>
+                            <th>File Formate</th>
+
+                        </tr>
+                     </thead>
+                     <tbody>
+                      @if(count($siteerrors) > 0)
+                        @php
+                             $sno = 1;
+                        @endphp
+                        @foreach($siteerrors as $siteerr)
+                        <tr>
+                           <td>{{$sno}}</td>
+                           <td><a href="{{ route('admin-site-upload-errors', $siteerr->id )}}">{{$siteerr->site_type}}</a> </td>
+                           <td>{{$siteerr->asset_type}}</td>
+                           <td>{{$siteerr->device_type}}</td>
+                           <td>{{$siteerr->max_width}}</td>
+                           <td>{{$siteerr->max_height}}</td>
+                           <td>{{$siteerr->width}}</td>
+                           <td>{{$siteerr->height}}</td>
+                           <td>{{$siteerr->dimentions}}</td>
+                           <td>{{$siteerr->ratio}}</td>
+                           <td>{{$siteerr->max_size}}</td>
+                           <td>{{$siteerr->max_no}}</td>
+                           <td>{{$siteerr->min_no}}</td>
+                           <td>{{$siteerr->file_formate}}</td>
+
+                        </tr>
+                      @php
+                          $sno++;
+                        @endphp
+                       @endforeach
+                      @endif
+                        
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+   
+
+ 
+@endsection
+@section('scripts')     
+
+<!-- Page specific javascripts-->
+<link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css">
+<!-- Data table plugin-->
+<script type="text/javascript" src="{{ URL::asset('admin-assets/js/plugins/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('admin-assets/js/plugins/dataTables.bootstrap.min.js') }}"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js -->
+"></script>
+<script type="text/javascript">$('#sampleTable').DataTable();</script>
+<!-- Google analytics script-->
+<script type="text/javascript">
+  if(document.location.hostname == 'pratikborsadiya.in') {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-72504830-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+<script>
+ $("#sampleTable").on("click", ".demoSwal", function(){
+//   $('.demoSwal').click(function(){
+
+    var id = jQuery(this).attr('data-id');
+    var uri = jQuery(this).attr('data-uri');
+  var APP_URL = {!! json_encode(url('/')) !!}
+    swal({
+      title: "Are you sure?",
+      text: "You will not be able to recover this data!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, cancel plx!",
+      closeOnConfirm: false,
+      closeOnCancel: false
+    }, function(isConfirm) {
+      if (isConfirm) {
+        swal("Deleted!", "Your data has been deleted.", "success");
+        window.location.href=APP_URL+"/admin/"+uri+"/"+id;
+      } else {
+        swal("Cancelled", "Your data is safe :)", "error");
+      }
+    });
+  });
+  
+</script>
+
+
+@endsection
+    

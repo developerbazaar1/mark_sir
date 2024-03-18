@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url('../Lato-Medium.ttf');
+  }
+
+.logo {
+    margin-top: 61px;
+}
+
+/* form starts here  */
+
+.formText .back-btn a {
+    font-weight: 500;
+    font-size: 12px;
+    font-family: 'Lato-Medium';
+}
+
+.formText .back-btn svg {
+    padding-bottom: 2px;
+}
+
+.img-fix {
+    margin-top: 60px;
+    margin-bottom: 12px;
+}
+
+
+.formText h2 {
+    color: #001F3F;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-bottom: 10px;
+}
+
+.formText h6 {
+    font-family: 'Lato-Medium';
+    color: #2A2A2A;
+    letter-spacing: 0.32px;
+    margin-bottom: 25px;
+}
+
+form .validation {
+    font-family: 'Lato-Medium';
+    font-size: 12px;
+    color: #FF0000;
+}
+
+.formText input {
+    border: none;
+    border-bottom: 1px solid #A1A1A1;
+    border-radius: 0;
+    /* width: 525px; */
+}
+
+.formText input::placeholder {
+    color: #9D9D9D;
+}
+
+input.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #A1A1A1;
+}
+
+.submit-btn {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    background-color: #0D429D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* margin-bottom: 13px; */
+}
+
+.submit-btn:hover {
+    background-color: #0D429D;
+}
+
+#access-mail {
+    padding: 10px 0px;
+    margin-bottom: 15px;
+}
+
+
+/* footer  */
+
+.foot {
+    color: #001F3F;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* modal */
+
+.modal-cont {
+    padding: 15px 30px;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 31, 63, 0.25);
+}
+
+.modal-cont h4 {
+    color: #001F3F;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.modal-cont>.modal-body {
+    color: #2A2A2A;
+    letter-spacing: 0.32px;
+}
+
+.okay-btn {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    background-color: #0D429D;
+    padding: 10px 55px;
+    border-radius: 5px;
+}
+
+.okay-btn:hover {
+    background-color: #0D429D;
+}
